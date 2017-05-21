@@ -1,0 +1,52 @@
+﻿@model IEnumerable<FirstActualMVC.Models.ENTITIES.tbl_customer>
+
+@{
+    ViewBag.Title = "Customer";
+}
+
+<h2>Customer</h2>
+<img src="C:\Users\castr_000\Pictures\nadia-comaneci-9254240-2-raw.jpg" alt="Profile View" style="width:300px;height:500px;">
+	</img>
+<p>
+    @Html.ActionLink("Create New", "CreateCustomer")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CUST_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CITY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GRADE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SALESMAN_ID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUST_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CITY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GRADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SALESMAN_ID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CUSTOMER_ID }) |
+            @Html.ActionLink("Details", "CustomerDetail", new { id=item.CUSTOMER_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CUSTOMER_ID })
+        </td>
+    </tr>       
+}
+
+</table>

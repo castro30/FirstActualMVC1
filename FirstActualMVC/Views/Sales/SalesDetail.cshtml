@@ -1,0 +1,42 @@
+﻿@model FirstActualMVC.Models.ENTITIES.tbl_salesman
+
+@{
+    ViewBag.Title = "SalesDetail";
+}
+
+<h2>SalesDetail</h2>
+
+<div>
+    <h4>tbl_salesman</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CITY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COMMISSION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COMMISSION)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditSalesPeople", new { id = Model.SALESMAN_ID }) |
+    @Html.ActionLink("Back to List", "salesman")
+</p>

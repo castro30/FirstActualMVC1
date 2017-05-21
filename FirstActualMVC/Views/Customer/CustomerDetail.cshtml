@@ -1,0 +1,50 @@
+﻿@model FirstActualMVC.Models.ENTITIES.tbl_customer
+
+@{
+    ViewBag.Title = "CustomerDetail";
+}
+
+<h2>CustomerDetail</h2>
+
+<div>
+    <h4>tbl_customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CUST_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUST_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CITY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GRADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GRADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SALESMAN_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SALESMAN_ID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CUSTOMER_ID }) |
+    @Html.ActionLink("Back to List", "customer")
+</p>

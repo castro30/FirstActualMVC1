@@ -1,0 +1,45 @@
+﻿@model IEnumerable<FirstActualMVC.Models.ENTITIES.tbl_salesman>
+
+@{
+    ViewBag.Title = "Salesman";
+}
+
+<h2>Salesman</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CITY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMMISSION)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CITY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMMISSION)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditSalesPeople", new { id=item.SALESMAN_ID }) |
+            @Html.ActionLink("Details", "SalesDetail", new { id=item.SALESMAN_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SALESMAN_ID })
+        </td>
+    </tr>
+}
+
+</table>

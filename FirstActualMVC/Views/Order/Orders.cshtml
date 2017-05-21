@@ -1,0 +1,49 @@
+﻿@model IEnumerable<FirstActualMVC.Models.ENTITIES.tbl_orders>
+
+@{
+    ViewBag.Title = "Orders";
+}
+
+<h2>Orders</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PURCH_AMT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ORD_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CUSTOMER_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SALESMAN_ID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PURCH_AMT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ORD_DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUSTOMER_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SALESMAN_ID)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "OrderDetail", new { id=item.ORD_NO }) 
+        </td>
+    </tr>
+}
+
+</table>

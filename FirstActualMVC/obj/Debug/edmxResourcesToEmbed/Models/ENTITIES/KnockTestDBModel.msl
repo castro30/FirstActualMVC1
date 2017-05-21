@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KnockAroundDatabaseModelStoreContainer" CdmEntityContainer="KnockAroundDatabaseContext">
+    <EntitySetMapping Name="tbl_customer">
+      <EntityTypeMapping TypeName="KnockAroundDatabaseModel.tbl_customer">
+        <MappingFragment StoreEntitySet="tbl_customer">
+          <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
+          <ScalarProperty Name="CUST_NAME" ColumnName="CUST_NAME" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="GRADE" ColumnName="GRADE" />
+          <ScalarProperty Name="SALESMAN_ID" ColumnName="SALESMAN_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_orders">
+      <EntityTypeMapping TypeName="KnockAroundDatabaseModel.tbl_orders">
+        <MappingFragment StoreEntitySet="tbl_orders">
+          <ScalarProperty Name="ORD_NO" ColumnName="ORD_NO" />
+          <ScalarProperty Name="PURCH_AMT" ColumnName="PURCH_AMT" />
+          <ScalarProperty Name="ORD_DATE" ColumnName="ORD_DATE" />
+          <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
+          <ScalarProperty Name="SALESMAN_ID" ColumnName="SALESMAN_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_salesman">
+      <EntityTypeMapping TypeName="KnockAroundDatabaseModel.tbl_salesman">
+        <MappingFragment StoreEntitySet="tbl_salesman">
+          <ScalarProperty Name="SALESMAN_ID" ColumnName="SALESMAN_ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="COMMISSION" ColumnName="COMMISSION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
